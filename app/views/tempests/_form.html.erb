@@ -1,0 +1,109 @@
+<%= form_for(@tempest) do |f| %>
+  <% if @tempest.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@tempest.errors.count, "error") %> prohibited this tempest from being saved:</h2>
+
+      <ul>
+      <% @tempest.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :urgency %><br />
+    <%= f.number_field :urgency %>
+  </div>
+  <div class="field">
+    <%= f.label :occupancy %><br />
+    <%= f.number_field :occupancy %>
+  </div>
+  <div class="field">
+    <%= f.label :power %><br />
+    <%= f.check_box :power %>
+  </div>
+  <div class="field">
+    <%= f.label :heat %><br />
+    <%= f.check_box :heat %>
+  </div>
+  <div class="field">
+    <%= f.label :hotWater %><br />
+    <%= f.check_box :hotWater %>
+  </div>
+  <div class="field">
+    <%= f.label :meals %><br />
+    <%= f.number_field :meals %>
+  </div>
+  <div class="field">
+    <%= f.label :dietRestrictions %><br />
+    <%= f.text_field :dietRestrictions %>
+  </div>
+  <div class="field">
+    <%= f.label :flashlight %><br />
+    <%= f.number_field :flashlight %>
+  </div>
+  <div class="field">
+    <%= f.label :batteries %><br />
+    <%= f.number_field :batteries %>
+  </div>
+  <div class="field">
+    <%= f.label :blankets %><br />
+    <%= f.number_field :blankets %>
+  </div>
+  <div class="field">
+    <%= f.label :personal %><br />
+    <%= f.text_field :personal %>
+  </div>
+  <div class="field">
+    <%= f.label :cleanUp %><br />
+    <%= f.check_box :cleanUp %>
+  </div>
+  <div class="field">
+    <%= f.label :foodDistro %><br />
+    <%= f.check_box :foodDistro %>
+  </div>
+  <div class="field">
+    <%= f.label :kitchen %><br />
+    <%= f.check_box :kitchen %>
+  </div>
+  <div class="field">
+    <%= f.label :nameLast %><br />
+    <%= f.text_field :nameLast %>
+  </div>
+  <div class="field">
+    <%= f.label :nameFirst %><br />
+    <%= f.text_field :nameFirst %>
+  </div>
+  <div class="field">
+    <%= f.label :zip %><br />
+    <%= f.number_field :zip %>
+  </div>
+  <div class="field">
+    <%= f.label :streetCode %><br />
+    <%= f.number_field :streetCode %>
+  </div>
+  <div class="field">
+    <%= f.label :phone %><br />
+    <%= f.number_field :phone %>
+  </div>
+  <div class="field">
+    <%= f.label :dateTime %><br />
+    <%= f.datetime_select :dateTime %>
+  </div>
+  <div class="field">
+    <%= f.label :results %><br />
+    <%= f.text_field :results %>
+  </div>
+  <div class="field">
+    <%= f.label :revisit %><br />
+    <%= f.check_box :revisit %>
+  </div>
+  <div class="field">
+    <%= f.label :complete %><br />
+    <%= f.check_box :complete %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

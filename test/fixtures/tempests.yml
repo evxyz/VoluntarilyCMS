@@ -1,0 +1,51 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  urgency: 1
+  occupancy: 1
+  power: false
+  heat: false
+  hotWater: false
+  meals: 1
+  dietRestrictions: MyString
+  flashlight: 1
+  batteries: 1
+  blankets: 1
+  personal: 
+  cleanUp: false
+  foodDistro: false
+  kitchen: false
+  nameLast: MyString
+  nameFirst: MyString
+  zip: 1
+  streetCode: 1
+  phone: 1
+  dateTime: 2012-11-10 03:48:02
+  results: MyString
+  revisit: false
+  complete: false
+
+two:
+  urgency: 1
+  occupancy: 1
+  power: false
+  heat: false
+  hotWater: false
+  meals: 1
+  dietRestrictions: MyString
+  flashlight: 1
+  batteries: 1
+  blankets: 1
+  personal: 
+  cleanUp: false
+  foodDistro: false
+  kitchen: false
+  nameLast: MyString
+  nameFirst: MyString
+  zip: 1
+  streetCode: 1
+  phone: 1
+  dateTime: 2012-11-10 03:48:02
+  results: MyString
+  revisit: false
+  complete: false

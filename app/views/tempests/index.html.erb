@@ -1,0 +1,67 @@
+<h1>Listing tempests</h1>
+
+<table>
+  <tr>
+    <th>Urgency</th>
+    <th>Occupancy</th>
+    <th>Power</th>
+    <th>Heat</th>
+    <th>Hotwater</th>
+    <th>Meals</th>
+    <th>Dietrestrictions</th>
+    <th>Flashlight</th>
+    <th>Batteries</th>
+    <th>Blankets</th>
+    <th>Personal</th>
+    <th>Cleanup</th>
+    <th>Fooddistro</th>
+    <th>Kitchen</th>
+    <th>Namelast</th>
+    <th>Namefirst</th>
+    <th>Zip</th>
+    <th>Streetcode</th>
+    <th>Phone</th>
+    <th>Datetime</th>
+    <th>Results</th>
+    <th>Revisit</th>
+    <th>Complete</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @tempests.each do |tempest| %>
+  <tr>
+    <td><%= tempest.urgency %></td>
+    <td><%= tempest.occupancy %></td>
+    <td><%= tempest.power %></td>
+    <td><%= tempest.heat %></td>
+    <td><%= tempest.hotWater %></td>
+    <td><%= tempest.meals %></td>
+    <td><%= tempest.dietRestrictions %></td>
+    <td><%= tempest.flashlight %></td>
+    <td><%= tempest.batteries %></td>
+    <td><%= tempest.blankets %></td>
+    <td><%= tempest.personal %></td>
+    <td><%= tempest.cleanUp %></td>
+    <td><%= tempest.foodDistro %></td>
+    <td><%= tempest.kitchen %></td>
+    <td><%= tempest.nameLast %></td>
+    <td><%= tempest.nameFirst %></td>
+    <td><%= tempest.zip %></td>
+    <td><%= tempest.streetCode %></td>
+    <td><%= tempest.phone %></td>
+    <td><%= tempest.dateTime %></td>
+    <td><%= tempest.results %></td>
+    <td><%= tempest.revisit %></td>
+    <td><%= tempest.complete %></td>
+    <td><%= link_to 'Show', tempest %></td>
+    <td><%= link_to 'Edit', edit_tempest_path(tempest) %></td>
+    <td><%= link_to 'Destroy', tempest, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Tempest', new_tempest_path %>
