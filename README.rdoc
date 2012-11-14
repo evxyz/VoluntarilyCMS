@@ -1,7 +1,4 @@
-
-
-# frontend Code From Gary
-http://www.salesmoto.com/pearson/pearson.php
+Replaces the standard README doc with Project notes
 
 # Backend
 https://github.com/evx001/VoluntarilyCMS.git
@@ -9,3 +6,87 @@ https://github.com/evx001/VoluntarilyCMS.git
 # 
 http://developer.pearson.com/showcase
 
+########### frontend Code From Gary ################
+http://www.salesmoto.com/pearson/pearson.php
+
+
+
+<!DOCTYPE html><html><head>
+
+<meta charset="utf-8">
+<title>Volunteer</title>
+
+<meta name="description" content="">
+<meta name="author" content="">
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.8.23/jquery-ui.min.js"></script>
+<link href="css/bootstrap.css" rel="stylesheet">
+<link href="css/bootstrap-responsive.min.css" rel="stylesheet">
+
+<link href='http://fonts.googleapis.com/css?family=Anton' rel='stylesheet' type='text/css'>
+
+<!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+<!--[if lt IE 9]>
+  <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+
+
+<script>
+
+$().ready(function()
+{
+            var url = "http://api.pearson.com/nursing-health/v1/articles/CPR-introduction?apikey=401367b694858e9334677abb3db45cad";
+			// var url = "https://api.pearson.com/eyewitness/newyork/block/"+ $(this).attr('title') +".json?apikey=ac02c9ac63648db52252bb2681377f92&jsonp=?";
+            $.getJSON(url, function(data) 
+			{
+                console.log(data);
+			});
+});
+
+</script>
+
+</head><body>
+    
+<div class="container">
+
+    <ul id="content" class="nav nav-tabs nav-stacked"></ul>
+
+</div> 
+
+<script>
+/*
+setTimeout(function() 
+{
+      $(".link").click(function(e)
+      {
+        e.preventDefault();
+        
+        $("#content").empty();
+
+        var te2t = "https://api.pearson.com/eyewitness/newyork/block/"+ $(this).attr('title') +".json?apikey=ac02c9ac63648db52252bb2681377f92&jsonp=?";
+        $.getJSON( te2t , function(data) 
+        {
+            console.log(data);
+            $.each(data.block.article.head, function(){
+            var imgcontent = "<img src='federal-hall.jpg' class='imga'>";
+            imgcontent += "<h2>"+data.block.article.head['#text']+"</h2>";
+            imgcontent += "<p>"+ data.block.article.p[0]["#text"] +"</p>";
+
+            imgcontent += '<button class="btn btn-large btn-block btn-primary" type="button">Ask for permission</button>';
+            imgcontent += '<button class="btn btn-large btn-block btn-success" type="button">Post poof</button>';
+            imgcontent += '<button class="btn btn-large btn-block" type="button">Directions</button>';
+
+            var te3t = "https://api.pearson.com/eyewitness/newyork/block/"+ data.block.article.link[1]["@id"] +".json?apikey=ac02c9ac63648db52252bb2681377f92&jsonp=?";
+
+    console.log(data.block.article.link[1]["@id"]);
+    $( imgcontent ).appendTo("#content")
+});
+        });
+
+        });
+}, 1000);
+*/
+</script>
+
+<h1><br>Step 1: approaching the casualty</h1><br>Firstly, always check the area for any signs of danger before approaching the casualty. There is no point in endangering yourself and adding to the casualties. See Figure 3.<br><br>Tip	When checking the area for signs of danger you must  always approach the casualty with caution: he/she might  be pretending to have collapsed in order to initiate an attack.<img src='https://api.pearson.com/nursing-health/v1/images/CPR-M01UF003.png?apikey=401367b694858e9334677abb3db45cad'>
+</body></html>
